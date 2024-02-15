@@ -51,10 +51,11 @@ const calculateAge =(year, month, day) => {
     let age = today.getFullYear() - birthDate.getFullYear()
     const monthDiff = today.getMonth() - birthDate.getMonth();
     if (monthDiff < 0 || (monthDiff === 0 && today.getDay() < birthDate.getDay())) {
-        return age--
+        age--
     }
     return age ;
 }
+
 
 const onClickHandler =()=> {
     const yearEle = document.querySelector('.card__input[name="year"]');
@@ -77,4 +78,3 @@ inputs.forEach(input => {
         even.key === "Enter" && onClickHandler()
     })
 })
-
